@@ -30,9 +30,9 @@ class BesepaException extends \Exception
             $message = $message . " " . $response_data->error_description;
         }
 
-        if(isset($response_data->messages) && is_array($response_data->messages))
+        if(isset($response_data->messages) && (is_object($response_data->messages) || is_array($response_data->messages)))
         {
-            $this->messages = $response_data->messages;
+            $this->messages = (array)$response_data->messages;
         }
 
         parent::__construct($message);
