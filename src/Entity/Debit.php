@@ -29,14 +29,13 @@ class Debit implements EntityInterface
 
     public $description;
 
-    public $debtor_bank_account;
+    public $debtor_bank_account_id;
 
-    public $creditor_bank_account;
+    public $creditor_bank_account_id;
 
     public $metadata;
 
     public $customer;
-
 
 
 }
